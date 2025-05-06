@@ -1,27 +1,29 @@
-import { getParkData } from "./parkService.mjs";
-
+import { getParkData, parkInfoLinks } from "./parkService.mjs";
+import setHeaderFooter from "./setHeaderFooter.mjs";
+import { mediaCardTemplate } from "./templates.mjs";
 const parkData = getParkData();
 
-// Template for the park info
-function parkInfoTemplate(info) {
-  return `<a href="/" class="location_title">${info.name}</a>
-    <p class="location_states">
-      <span>${info.designation}</span>
-      <span>${info.states}</span>
-    </p>`;
+
+function setParkIntro(data) {
+  const infoElement = document.querySelector(".intro");
+  infoElement.innerHTML = `<h1>${parkData.fullName}</h1>
+  <p>${parkData.description}</p>`;
 }
 
-// Update the disclaimer with the link and park name
-document.querySelector(".disclaimer > a").href = parkData.url;
-document.querySelector(".disclaimer > a").innerHTML = parkData.fullName;
+function setParkInfoLinks(data) {
+  const infoElement = document.querySelector(".info");
+  // we have multiple links to build...so we map to transform the array of objects into an array of HTML strings.
+  const html = data.map(mediaCardTemplate);
+  // join the array of strings into one string and insert it into the section
+  infoElement.insertAdjacentHTML("afterbegin", html.join(""));
+}
 
-// Set the page title to the park name
-document.title = parkData.fullName;
 
-// Set the image with the first one
-const img = document.querySelector(".location > img");
-img.src = parkData.images[0].url;
-img.alt = parkData.fullName;
 
-// Put the park data into "location_content"
-document.querySelector(".location_content").innerHTML = parkInfoTemplate(parkData);
+
+
+setHeaderFooter(parkData);
+setParkIntro(parkData);
+setParkInfoLinks(parkInfoLinks);
+
+
