@@ -3,6 +3,7 @@
   background-image: url("../images/topo_pattern.png");
   padding: 1.5rem;
 }
+
 .park-footer h3 {
   font-family: var(--bs-font-serif);
   text-transform: uppercase;
