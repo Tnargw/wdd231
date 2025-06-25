@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details</title>
+  <link rel="stylesheet" href="product-details.css" />
+  <script type="module" src="product-details.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <h1>Product Details</h1>
+    <div class="product-info">
+      <h2 id="product-title">Product</h2>
+      <p id="product-description"></p>
+      <span id="product-price"></span>
+      <button>Add to Cart</button>
+    </div>
+  </main>
+
+  <div id="overlay" aria-hidden="false">
+    <div class="modal">
+      <h2>Don't Miss Out</h2>
+      <p>Sign up for email updates and dental deals!</p>
+      <input type="email" id="email" placeholder="Your email" />
+      <button id="signup">Sign Up</button>
+    </div>
+  </div>
+</body>
+</html>

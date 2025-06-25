@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 2rem;
+    font-family: sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+}
+
+
+.card {
+    background: #fff;
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-info {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #482c3d;
+    margin-bottom: 5rem;
+    border-bottom: 2px solid #e5d352;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #482c3d;
+    padding-bottom: 0.5rem;
+    text-align: left;
+    border-bottom: #333 2px solid;
+}
+
+img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+
+button {
+    background: #e5d352;
+    color: #482c3d;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d9e76c;
+}
+
+
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay[aria-hidden="true"] {
+    display: none;
+}
+
+.modal {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.modal input {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 2px solid #333;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.modal button {
+    background: #ac3931;
+    color: white;
+}
+
+.modal button:hover {
+    background: #482c3d;
+}
