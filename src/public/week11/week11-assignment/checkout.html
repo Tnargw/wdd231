@@ -63,9 +63,10 @@
                 <div class="form-group-grid triple">
                     <div class="form-group">
                         <label for="city">City:</label>
-                        <input type="text" id="city" name="city" required maxlength="20"
-                            pattern="(?=.*[aeiouAEIOU])"
-                            title="City has to contain a vowel and be less than 20 characters.">
+                   <input type="text" id="city" name="city" required
+                               pattern=".*[aeiouAEIOU]+.*"
+                               maxlength = "20"
+                               title="City has to have a vowel.">
                     </div>
                     <div class="form-group">
                         <label for="state">State:</label>
